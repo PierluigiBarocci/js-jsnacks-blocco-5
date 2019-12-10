@@ -7,10 +7,21 @@
 var test = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 var final = [];
 
+// con Slice si fa la stessa identica cosa in una riga
+
+console.log(mySecondChoice(2, 6, test));
+
+function mySecondChoice (a, b, array) {
+    var sliced = array.slice(a, (b + 1));
+    return sliced;
+};
+
+
+// prova più 'artigianale'
+
 myChoice(2, 6, test, final);
 
 console.log(final);
-
 
 function myChoice(a, b, array, newArray) {
     if ((a > b) || (b >= array.length)) {
